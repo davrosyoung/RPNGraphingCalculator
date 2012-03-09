@@ -78,9 +78,11 @@
         } else if ([operation isEqualToString:@"*"]) {
             result = [self popOperandOffStack:stack] * [self popOperandOffStack:stack];
         } else if ([operation isEqualToString:@"/"]) {
-            result = [self popOperandOffStack:stack] / [self popOperandOffStack:stack];
+            double divisor = [self popOperandOffStack:stack];
+            if (divisor) result = [self popOperandOffStack:stack] / divisor;
         } else if ([operation isEqualToString:@"-"]) {
-            result = [self popOperandOffStack:stack] - [self popOperandOffStack:stack];
+            double subtrahend = [self popOperandOffStack:stack];
+            result = [self popOperandOffStack:stack] - subtrahend;
         }
     }
     return result;
