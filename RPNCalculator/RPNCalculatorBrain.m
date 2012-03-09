@@ -8,16 +8,21 @@
 
 #import "RPNCalculatorBrain.h"
 
+//-------------------------------------------------
 @interface RPNCalculatorBrain()
+
 @property (nonatomic, strong) NSMutableArray *programStack;
+
 @end
 
 //-------------------------------------------------
 @implementation RPNCalculatorBrain
 @synthesize programStack = _programStack;
 
+
 //-------------------------------------------------
 - (NSMutableArray *)programStack {
+    
     if (_programStack == nil) {
         _programStack = [[NSMutableArray alloc] init ];
     }
@@ -25,35 +30,41 @@
 }
 
 //-------------------------------------------------
+- (id)program {
+
+    return [self.programStack copy];
+}
+
+//-------------------------------------------------
+- (void)pushOperand:(double)operand {
+    
+    [self.programStack addObject:[NSNumber numberWithDouble:operand]];
+}
+
+//-------------------------------------------------
 - (double)popOperand {
+    
     NSNumber *operandObject = [self.programStack lastObject];
     if (operandObject) [self.programStack removeLastObject];
     return [operandObject doubleValue];
 }
 
 //-------------------------------------------------
-- (id)program {
-    return [self.programStack copy];
-}
-
-//-------------------------------------------------
 - (double)performOperation:(NSString *)operation {
+    
     [self.programStack addObject:operation];
     return [RPNCalculatorBrain runProgram:self.program];
 }
 
 //-------------------------------------------------
 + (NSString *)descriptionOfProgram:(id)program {
-    return @"BFKSDBFJKF sdkfjdsf";
-}
-
-//-------------------------------------------------
-- (void)pushOperand:(double)operand {
-    [self.programStack addObject:[NSNumber numberWithDouble:operand]];
+    
+    return @"Reverse Polish Notation Calculator";
 }
 
 //-------------------------------------------------
 + (double)popOperandOffStack:(NSMutableArray *)stack {
+ 
     double result = 0;
     id topOfStack = [stack lastObject];
     if (topOfStack) [stack removeLastObject];
@@ -77,13 +88,12 @@
 
 //-------------------------------------------------
 + (double)runProgram:(id)program {
+    
     NSMutableArray *stack;
     if ([program isKindOfClass:[NSArray class]]) {
         stack = [program mutableCopy];
     }
     return [self popOperandOffStack:stack];
-    
 }
-
 
 @end
