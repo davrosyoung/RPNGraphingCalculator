@@ -8,14 +8,14 @@
 
 #import "RPNCalculatorBrain.h"
 
-//-------------------- INTERFACE -----------------------------
+//========================= INTERFACE ========================= 
 @interface RPNCalculatorBrain()
 
 @property (nonatomic, strong) NSMutableArray *programStack;
 
 @end
 
-//--------------------- IMPLEMENTATION ----------------------------
+//========================= IMPLEMENTATION =========================
 @implementation RPNCalculatorBrain
 @synthesize programStack = _programStack;
 
