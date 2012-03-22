@@ -12,12 +12,28 @@
 @interface RPNCalculatorBrain()
 
 @property (nonatomic, strong) NSMutableArray *programStack;
+@property (nonatomic, strong) NSDictionary *variables;
+@property (nonatomic, strong) NSDictionary *operations;
 
 @end
 
 //========================= IMPLEMENTATION =========================
 @implementation RPNCalculatorBrain
 @synthesize programStack = _programStack;
+@synthesize variables = _variables;
+@synthesize operations = _operations;
+
+- (NSDictionary *)operations
+{        
+    if ( _operations == nil )
+    {
+        _operations = [[NSDictionary init]alloc];
+        NSMutableDictionary mutie = _operations.mutableCopy;
+        
+    }
+    
+    return _operations;
+}
 
 
 //-------------------------------------------------
@@ -39,6 +55,11 @@
 - (void)pushOperand:(double)operand {
     
     [self.programStack addObject:[NSNumber numberWithDouble:operand]];
+}
+
+- (void)pushVariableOperand:(NSString *)variable
+{
+    [self.programStack addObject:variable];
 }
 
 //-------------------------------------------------

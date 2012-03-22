@@ -91,7 +91,9 @@
             self.display.text = [NSString stringWithFormat:@"%g", (cos([self.display.text doubleValue]*M_PI/180))];
             skipPerformOperation = TRUE;
         }
-    }
+    } else if ( [operationString isEqualToString:@"√"] ) {
+        NSLog( @"sqrt pressed");
+    } 
 
 
     
@@ -106,6 +108,11 @@
         NSString *resultString = [NSString stringWithFormat:@"%g", result];
         self.display.text = resultString;
     }
+}
+
+- (IBAction)variablePressed:(UIButton *)sender
+{
+    NSLog( @"Variable button %@ pressed", sender.titleLabel.text );
 }
 
 //--------------------------------------------------

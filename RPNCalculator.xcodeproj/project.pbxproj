@@ -16,6 +16,7 @@
 		2E1EE84514FB1AA200F3A227 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1EE84314FB1AA200F3A227 /* MainStoryboard.storyboard */; };
 		2E1EE84814FB1AA200F3A227 /* RPNCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EE84714FB1AA200F3A227 /* RPNCalculatorViewController.m */; };
 		2E1EE85014FB269500F3A227 /* RPNCalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EE84F14FB269500F3A227 /* RPNCalculatorBrain.m */; };
+		5546BD29151B114400B09CF8 /* Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 5546BD28151B114400B09CF8 /* Add.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		2E1EE84714FB1AA200F3A227 /* RPNCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPNCalculatorViewController.m; sourceTree = "<group>"; };
 		2E1EE84E14FB269500F3A227 /* RPNCalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPNCalculatorBrain.h; sourceTree = "<group>"; };
 		2E1EE84F14FB269500F3A227 /* RPNCalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPNCalculatorBrain.m; sourceTree = "<group>"; };
+		5546BD25151B10D400B09CF8 /* RPNOperationProtocol.h */ = {isa = PBXFileReference; path = RPNOperationProtocol.h; sourceTree = "<group>"; };
+		5546BD27151B114400B09CF8 /* Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Add.h; sourceTree = "<group>"; };
+		5546BD28151B114400B09CF8 /* Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Add.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,9 @@
 				2E1EE84614FB1AA200F3A227 /* RPNCalculatorViewController.h */,
 				2E1EE84714FB1AA200F3A227 /* RPNCalculatorViewController.m */,
 				2E1EE83814FB1AA200F3A227 /* Supporting Files */,
+				5546BD25151B10D400B09CF8 /* RPNOperationProtocol.h */,
+				5546BD27151B114400B09CF8 /* Add.h */,
+				5546BD28151B114400B09CF8 /* Add.m */,
 			);
 			path = RPNCalculator;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 				2E1EE84214FB1AA200F3A227 /* RPNCalculatorAppDelegate.m in Sources */,
 				2E1EE84814FB1AA200F3A227 /* RPNCalculatorViewController.m in Sources */,
 				2E1EE85014FB269500F3A227 /* RPNCalculatorBrain.m in Sources */,
+				5546BD29151B114400B09CF8 /* Add.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +290,7 @@
 				2E1EE84D14FB1AA200F3A227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
