@@ -10,13 +10,15 @@
 
 @interface RPNCalculatorBrain : NSObject
 
-- (void)pushOperand:(double)operand;
-- (double)performOperation:(NSString *)operation;
+- (void)push:(id)operand;
+//- (double)performOperation:(NSString *)operation;
+- (id)pop;
 
 //--------------------Public API ----------------------
 @property (readonly) id program;
 
 + (double)runProgram:(id)program;
 + (NSString *)descriptionOfProgram:(id)program;
++ (double)runProgram:(id)program usingVariableValues:(NSDictionary *)variableValues;
 
 @end

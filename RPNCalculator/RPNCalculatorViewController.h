@@ -11,5 +11,7 @@
 @interface RPNCalculatorViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
+@property (weak, nonatomic) IBOutlet UILabel *variableDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *programDisplay;
 
 @end

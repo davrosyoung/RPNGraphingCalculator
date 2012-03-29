@@ -25,7 +25,7 @@ NSArray *whyTimesTwo;
     NSArray *values = [[NSArray alloc]initWithObjects:[[NSNumber alloc]initWithDouble:23.0],[[NSNumber alloc]initWithDouble:42.0],[[NSNumber alloc]initWithDouble:-1.0],[[NSNumber alloc]initWithDouble:0.0],nil];
     mockVariables = [[NSDictionary alloc]initWithObjects:values forKeys:names];    
     
-    brain = [[RPNCalculatorBrain alloc]init];
+    brain = [[RPNCalculatorBrain alloc] init];
     
     whyTimesTwo = [[NSArray alloc]initWithObjects:@"y", @"y", "+" , nil ];
     
@@ -40,10 +40,7 @@ NSArray *whyTimesTwo;
 
 - (void)testRunningProgramWithVariables
 {
-    
-    NSLog( @"this unit test passes!!" );
-
-    STAssertTrue( [[RPNCalculatorBrain class]runProgram:whyTimesTwo usingVariableValues:mockVariables] == 84.0, @"y,y,+ should equal 84!!" );
+    STAssertTrue( [RPNCalculatorBrain runProgram:whyTimesTwo usingVariableValues:mockVariables] == 84.0, @"y,y,+ should equal 84!!" );
 }
 
 @end
