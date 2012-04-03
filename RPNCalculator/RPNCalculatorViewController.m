@@ -33,6 +33,12 @@
 @synthesize variableMap = _variableMap;
 
 
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+ 
 - (NSDictionary *)presetA
 {
     if ( _presetA == nil )
